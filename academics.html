@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics Page | BrightPath Academy</title>
+    <link href="assets/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Navigation -->
+<nav class="sticky top-0 bg-white shadow-sm z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="assets/img/logo big.png" alt="Logo" class="h-12 w-full">
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <!-- Home Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-indigo-600 transition flex items-center">
+                        Home
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="absolute hidden group-hover:block pt-4 min-w-[200px]">
+                        <div class="bg-white rounded-lg shadow-lg py-2">
+                            <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>
+                            <a href="home-1.html" class="block px-6 py-2 hover:bg-gray-50">Home 1</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pages Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-indigo-600 transition flex items-center">
+                        Pages
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="absolute hidden group-hover:block pt-4 min-w-[200px]">
+                        <div class="bg-white rounded-lg shadow-lg py-2">
+                            <a href="Blog.html" class="block px-6 py-2 hover:bg-gray-50">Blog</a>
+                            <a href="post.html" class="block px-6 py-2 hover:bg-gray-50">Post</a>
+                            <a href="Alumni.html" class="block px-6 py-2 hover:bg-gray-50">Alumni</a>
+                            <a href="Admissions.html" class="block px-6 py-2 hover:bg-gray-50">Admission</a>
+                            <a href="academics.html" class="block px-6 py-2 hover:bg-gray-50 active">Academics</a>
+                            <a href="404.html" class="block px-6 py-2 hover:bg-gray-50">404</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition">About Us</a>
+                <a href="Contact.html" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
+                <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition">
+                    Apply Now
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button onclick="toggleMenu()" class="md:hidden text-2xl"><i class="bx bx-menu"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-white/95 z-50 hidden backdrop-blur-sm">
+    <div class="container mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <img src="assets/img/logo.png" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-2xl"><i class="bx bx-x"></i></button>
+        </div>
+        
+        <nav class="space-y-4">
+            <!-- Mobile Home Dropdown -->
+            <div class="relative group">
+                <button class="w-full text-left text-1xl py-2 flex justify-between items-center">
+                    Home
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute hidden group-hover:block pt-4 w-full z-20">
+                    <div class="bg-white rounded-lg shadow-lg py-2">
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>
+                        <a href="home-1.html" class="block px-6 py-2 hover:bg-gray-50">Home 1</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Pages Dropdown -->
+            <div class="relative group">
+                <button class="w-full text-left text-1xl py-2 flex justify-between items-center">
+                    Pages
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute hidden group-hover:block pt-4 w-full">
+                    <div class="bg-white rounded-lg shadow-lg py-2 ">
+                        <a href="Blog.html" class="block px-6 py-2 hover:bg-gray-50">Blog</a>
+                        <a href="post.html" class="block px-6 py-2 hover:bg-gray-50">Post</a>
+                        <a href="Alumni.html" class="block px-6 py-2 hover:bg-gray-50">Alumni</a>
+                        <a href="Admissions.html" class="block px-6 py-2 hover:bg-gray-50">Admission</a>
+                        <a href="academics.html" class="block px-6 py-2 hover:bg-gray-50">Academics</a>
+                        <a href="404.html" class="block px-6 py-2 hover:bg-gray-50">404</a>
+                    </div>
+                </div>
+            </div>            
+
+            <a href="about.html" class="block text-1xl py-2 hover:text-indigo-600">About Us</a>
+            <a href="Contact.html" class="block text-1xl py-2 hover:text-indigo-600">Contact</a>
+            <button class="bg-indigo-600 text-white px-8 py-3 rounded-full mt-4 w-full">
+                Apply Now
+            </button>
+        </nav>
+    </div>
+</div>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <!-- Academics Page -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h1 class="text-4xl font-bold mb-12">Academic Programs</h1>
+        
+        <!-- Program Filter Tabs -->
+        <div class="flex flex-wrap gap-4 mb-12" id="program-tabs">
+            <button data-tab="all" class="px-6 py-2 rounded-full bg-indigo-600 text-white tab-button active">
+                All Programs
+            </button>
+            <button data-tab="stem" class="px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 tab-button">
+                STEM
+            </button>
+            <button data-tab="arts" class="px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 tab-button">
+                Arts
+            </button>
+            <button data-tab="humanities" class="px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 tab-button">
+                Humanities
+            </button>
+            <button data-tab="sports" class="px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 tab-button">
+                Sports Academy
+            </button>
+        </div>
+
+        <!-- Program Cards Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="programs-container">
+            <!-- STEM Program -->
+            <div class="program-card bg-gray-50 p-8 rounded-2xl hover:shadow-md transition" data-category="stem">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indigo-600 text-white p-3 rounded-lg mr-4">
+                        <i class="w-8 h-8 bx bx-test-tube text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Advanced Science Program</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Comprehensive STEM curriculum with research opportunities</p>
+                <div class="flex items-center text-sm text-gray-500">
+                    <span class="mr-4">Grades 9-12</span>
+                    <span>35 Courses Available</span>
+                </div>
+            </div>
+
+            <!-- Arts Program -->
+            <div class="program-card bg-gray-50 p-8 rounded-2xl hover:shadow-md transition" data-category="arts">
+                <div class="flex items-center mb-4">
+                    <div class="bg-pink-600 text-white p-3 rounded-lg mr-4">
+                        <i class="w-8 h-8 bx bx-brush text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Visual & Performing Arts</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Develop your creative talents in our state-of-the-art studios</p>
+                <div class="flex items-center text-sm text-gray-500">
+                    <span class="mr-4">Grades 6-12</span>
+                    <span>22 Courses Available</span>
+                </div>
+            </div>
+
+            <!-- Add more program cards with appropriate data-category attributes -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-16">
+            <div class="text-6xl mb-4">😕</div>
+            <h3 class="text-2xl font-bold mb-2">No Programs Found</h3>
+            <p class="text-gray-600">Try selecting a different category</p>
+        </div>
+    </div>
+</section>
+    
+            <!-- Curriculum Overview -->
+            <div class="mt-16 bg-indigo-50 rounded-2xl p-12">
+                <h2 class="text-3xl font-bold mb-8">Curriculum Framework</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl">
+                        <h3 class="font-semibold mb-2">Core Subjects</h3>
+                        <ul class="list-disc pl-4 text-gray-600">
+                            <li>Mathematics</li>
+                            <li>Science</li>
+                            <!-- Add more subjects -->
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl">
+                        <h3 class="font-semibold mb-2">Core Subjects</h3>
+                        <ul class="list-disc pl-4 text-gray-600">
+                            <li>Mathematics</li>
+                            <li>Science</li>
+                            <!-- Add more subjects -->
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl">
+                        <h3 class="font-semibold mb-2">Core Subjects</h3>
+                        <ul class="list-disc pl-4 text-gray-600">
+                            <li>Mathematics</li>
+                            <li>Science</li>
+                            <!-- Add more subjects -->
+                        </ul>
+                    </div>
+                    <!-- Add curriculum sections -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="bx bx-up-arrow-alt fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition hidden">
+    </button>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white ">
+    <div class="py-12">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <div >
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">BrightPath Academy</h4>
+                </div>
+                <p class="text-gray-400 text-sm">Inspiring excellence since 2002</p>
+                <br>
+                <p class="text-gray-400 text-sm">123 Education Blvd<br>Innovation City, IC 45678</p>
+            </div>
+            <div>
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">Quick Links</h4>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="index.html" class="text-gray-400 hover:ms-3 transition">Home</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="academics.html" class="text-gray-400 hover:ms-3 transition">Academics</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="Admissions.html" class="text-gray-400 hover:ms-3 transition">Admissions</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="about.html" class="text-gray-400 hover:ms-3 transition">About us</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="Contact.html" class="text-gray-400 hover:ms-3 transition">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">Follow Us</h4>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="bx bxl-facebook-circle text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">Newsletter</h4>
+                </div>
+                <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+            </div>
+        </div>
+    </div>
+    <hr class="border-gray-700">
+    <p class="py-5 text-center">BrightPath Academy @copyright 2025. designed by <a href="#">eazy designs</a></p>
+</footer>
+
+    <!-- Modal -->
+    <div id="campus-modal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-8">
+            <div class="flex justify-between mb-6">
+                <h3 class="text-2xl font-bold">Campus Details</h3>
+                <button onclick="closeModal()" class="text-2xl">×</button>
+            </div>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/tabs.js"></script>
+
+</body>
+</html>

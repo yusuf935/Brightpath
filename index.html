@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightPath Academy</title>
+    <link href="assets/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Navigation -->
+<nav class="sticky top-0 bg-white shadow-sm z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="assets/img/logo big.png" alt="Logo" class="h-12 w-full">
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <!-- Home Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-indigo-600 transition flex items-center">
+                        Home
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="absolute hidden group-hover:block pt-4 min-w-[200px]">
+                        <div class="bg-white rounded-lg shadow-lg py-2">
+                            <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>
+                            <a href="home-1.html" class="block px-6 py-2 hover:bg-gray-50">Home 1</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pages Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-indigo-600 transition flex items-center">
+                        Pages
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="absolute hidden group-hover:block pt-4 min-w-[200px]">
+                        <div class="bg-white rounded-lg shadow-lg py-2">
+                            <a href="Blog.html" class="block px-6 py-2 hover:bg-gray-50">Blog</a>
+                            <a href="post.html" class="block px-6 py-2 hover:bg-gray-50">Post</a>
+                            <a href="Alumni.html" class="block px-6 py-2 hover:bg-gray-50">Alumni</a>
+                            <a href="Admissions.html" class="block px-6 py-2 hover:bg-gray-50">Admission</a>
+                            <a href="academics.html" class="block px-6 py-2 hover:bg-gray-50">Academics</a>
+                            <a href="404.html" class="block px-6 py-2 hover:bg-gray-50">404</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition active">About Us</a>
+                <a href="Contact.html" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
+                <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition">
+                    Apply Now
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button onclick="toggleMenu()" class="md:hidden text-2xl"><i class="bx bx-menu"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-white/95 z-50 hidden backdrop-blur-sm">
+    <div class="container mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <img src="assets/img/logo.png" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-2xl"><i class="bx bx-x"></i></button>
+        </div>
+        
+        <nav class="space-y-4">
+            <!-- Mobile Home Dropdown -->
+            <div class="relative group">
+                <button class="w-full text-left text-1xl py-2 flex justify-between items-center">
+                    Home
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute hidden group-hover:block pt-4 w-full z-20">
+                    <div class="bg-white rounded-lg shadow-lg py-2">
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>
+                        <a href="home-1.html" class="block px-6 py-2 hover:bg-gray-50">Home 1</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Pages Dropdown -->
+            <div class="relative group">
+                <button class="w-full text-left text-1xl py-2 flex justify-between items-center">
+                    Pages
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute hidden group-hover:block pt-4 w-full">
+                    <div class="bg-white rounded-lg shadow-lg py-2 ">
+                        <a href="Blog.html" class="block px-6 py-2 hover:bg-gray-50">Blog</a>
+                        <a href="post.html" class="block px-6 py-2 hover:bg-gray-50">Post</a>
+                        <a href="Alumni.html" class="block px-6 py-2 hover:bg-gray-50">Alumni</a>
+                        <a href="Admissions.html" class="block px-6 py-2 hover:bg-gray-50">Admission</a>
+                        <a href="academics.html" class="block px-6 py-2 hover:bg-gray-50">Academics</a>
+                        <a href="404.html" class="block px-6 py-2 hover:bg-gray-50">404</a>
+                    </div>
+                </div>
+            </div>            
+
+            <a href="about.html" class="block text-1xl py-2 hover:text-indigo-600">About Us</a>
+            <a href="Contact.html" class="block text-1xl py-2 hover:text-indigo-600">Contact</a>
+            <button class="bg-indigo-600 text-white px-8 py-3 rounded-full mt-4 w-full">
+                Apply Now
+            </button>
+        </nav>
+    </div>
+</div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-indigo-500 to-emerald-500 text-white py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-down">
+                Shaping Future Innovators
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                Where curiosity meets excellence in a nurturing learning environment
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-white text-indigo-600 px-8 py-3 rounded-full hover:bg-gray-100 transition">
+                    Explore Programs
+                </button>
+                <button class="border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-600 transition">
+                    Virtual Tour
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Showcase -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Campuses</h2>
+            <div class="grid md:grid-cols-3 gap-1 justify-items-center">
+                <!-- Campus 1 -->
+                <div class="relative group overflow-hidden">
+                    <img src="assets/img/img (21).jpg" 
+                         alt="Main Campus" 
+                         class="w-90 h-79 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold mb-2">Main Campus</h3>
+                            <p class="text-sm">Innovation City</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden">
+                    <img src="assets/img/img (13).jpg" 
+                         alt="Main Campus" 
+                         class="w-90 h-79 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold mb-2">Main Campus</h3>
+                            <p class="text-sm">Innovation City</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden">
+                    <img src="assets/img/img (10).jpg" 
+                         alt="Main Campus" 
+                         class="w-90 h-79 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold mb-2">Main Campus</h3>
+                            <p class="text-sm">Innovation City</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Campus 2 & 3 similar structure -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programs -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Academic Programs</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">STEM Education</h3>
+                    <p class="text-gray-600">Innovative programs in Science, Technology, Engineering, and Mathematics</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">STEM Education</h3>
+                    <p class="text-gray-600">Innovative programs in Science, Technology, Engineering, and Mathematics</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">STEM Education</h3>
+                    <p class="text-gray-600">Innovative programs in Science, Technology, Engineering, and Mathematics</p>
+                </div>
+                <!-- Add more program cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Student Stories</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/img/img (19).jpg" 
+                             alt="Student" 
+                             class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Class of 2023</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The hands-on learning approach transformed my educational experience."</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/img/img (11).jpg" 
+                             alt="Student" 
+                             class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">John Doe</h4>
+                            <p class="text-sm text-gray-600">Class of 2011</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The hands-on learning approach transformed my educational experience."</p>
+                </div>
+                <!-- Add more testimonials -->
+            </div>
+        </div>
+    </section>
+
+     <!-- Events Calendar -->
+     <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Academic Calendar</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-indigo-50 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
+                            <span class="block text-2xl font-bold">15</span>
+                            <span class="text-sm">JAN</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold">Science Fair</h3>
+                            <p class="text-sm text-gray-600">Main Campus</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Annual student science projects exhibition</p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
+                            <span class="block text-2xl font-bold">15</span>
+                            <span class="text-sm">MAR</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold">Science Fair</h3>
+                            <p class="text-sm text-gray-600">Main Campus</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Annual student science projects exhibition</p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
+                            <span class="block text-2xl font-bold">15</span>
+                            <span class="text-sm">MAY</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold">Science Fair</h3>
+                            <p class="text-sm text-gray-600">Main Campus</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Annual student science projects exhibition</p>
+                </div>
+                <!-- Add more events -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Athletics & Sports</h2>
+        
+        <!-- Sports Hero -->
+        <div class="relative rounded-2xl overflow-hidden mb-16">
+            <img src="assets/img/img (14).jpg" 
+                 alt="Sports" 
+                 class="w-full h-96 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-indigo-600/90 to-emerald-500/90 flex items-center p-8">
+                <div class="max-w-2xl">
+                    <h3 class="text-4xl font-bold text-white mb-4">Championship Spirit</h3>
+                    <p class="text-lg text-white mb-6">Developing athletes through teamwork, discipline, and sportsmanship</p>
+                    <button class="bg-white text-indigo-600 px-8 py-3 rounded-full hover:bg-gray-100 transition">
+                        Join a Team
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sports Teams Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="relative group overflow-hidden rounded-xl hover:shadow-lg transition">
+                <img src="assets/img/img (16).jpg" 
+                     alt="Basketball" 
+                     class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <div class="text-white">
+                        <h3 class="text-xl font-bold mb-2">Varsity Basketball</h3>
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">State Champions 2023</span>
+                            <span class="bg-emerald-500 px-3 py-1 rounded-full text-sm">12-2 Record</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soccer Team -->
+            <div class="relative group overflow-hidden rounded-xl hover:shadow-lg transition">
+                <img src="assets/img/img (3).jpg" 
+                     alt="Soccer" 
+                     class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <div class="text-white">
+                        <h3 class="text-xl font-bold mb-2">Girls Soccer</h3>
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">Regional Finalists</span>
+                            <span class="bg-emerald-500 px-3 py-1 rounded-full text-sm">Undefeated Season</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swimming Team -->
+            <div class="relative group overflow-hidden rounded-xl hover:shadow-lg transition">
+                <img src="assets/img/img (15).jpg" 
+                     alt="Swimming" 
+                     class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <div class="text-white">
+                        <h3 class="text-xl font-bold mb-2">Swim Team</h3>
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">5 State Records</span>
+                            <span class="bg-emerald-500 px-3 py-1 rounded-full text-sm">New Members Welcome</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sports Schedule -->
+        <div class="bg-gray-50 rounded-2xl p-8">
+            <h3 class="text-2xl font-bold mb-6">Upcoming Games</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-indigo-600 text-white">
+                        <tr>
+                            <th class="px-6 py-3 text-left">Date</th>
+                            <th class="px-6 py-3 text-left">Event</th>
+                            <th class="px-6 py-3 text-left">Teams</th>
+                            <th class="px-6 py-3 text-left">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 hover:bg-gray-100">
+                            <td class="px-6 py-4">March 15</td>
+                            <td class="px-6 py-4">Basketball Championship</td>
+                            <td class="px-6 py-4">BrightPath vs. City High</td>
+                            <td class="px-6 py-4">Main Gymnasium</td>
+                        </tr>
+                        <!-- Add more schedule rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Athletic Achievements -->
+        <div class="grid md:grid-cols-4 gap-8 mt-16">
+            <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-4xl font-bold text-indigo-600 mb-2">25+</div>
+                <div class="text-gray-600">Sports Teams</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-4xl font-bold text-emerald-500 mb-2">15</div>
+                <div class="text-gray-600">State Championships</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-4xl font-bold text-indigo-600 mb-2">100%</div>
+                <div class="text-gray-600">College Acceptance</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-4xl font-bold text-emerald-500 mb-2">5</div>
+                <div class="text-gray-600">Olympic Athletes</div>
+            </div>
+        </div>
+
+        <!-- Athlete Spotlight -->
+        <div class="mt-16 bg-indigo-50 rounded-2xl p-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="assets/img/img (5).jpg" 
+                         alt="Athlete" 
+                         class="rounded-xl shadow-lg">
+                    <div class="absolute -bottom-4 -right-4 bg-indigo-600 text-white px-6 py-2 rounded-full">
+                        Team Captain
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Athlete of the Month: Emily Rodriguez</h3>
+                    <p class="text-gray-600 mb-4">"Being part of the track team has taught me discipline and teamwork that extends beyond the field."</p>
+                    <div class="flex space-x-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-indigo-600">10.8s</div>
+                            <div class="text-sm text-gray-600">100m Dash</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-emerald-500">4.0</div>
+                            <div class="text-sm text-gray-600">GPA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Faculty Spotlight -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Meet Our Faculty</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl text-center hover:shadow-lg transition">
+                    <img src="assets/img/img (11).jpg" 
+                         alt="Faculty" 
+                         class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-semibold">Dr. Michael Chen</h3>
+                    <p class="text-gray-600 mb-2">Head of Science Department</p>
+                    <div class="flex justify-center space-x-2">
+                        <button class="text-indigo-600 hover:text-indigo-700">
+                            <!-- LinkedIn icon -->
+                        </button>
+                        <button class="text-indigo-600 hover:text-indigo-700">
+                            <!-- Email icon -->
+                        </button>
+                    </div>
+                </div>
+                <!-- Add more faculty members -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Campus Life</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="group relative block overflow-hidden rounded-lg">
+                    <img src="assets/img/img (17).jpg" 
+                         alt="Campus" 
+                         class="w-full h-48 object-cover transform group-hover:scale-110 transition">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white">Library Day</span>
+                    </div>
+                </a>
+                <a href="#" class="group relative block overflow-hidden rounded-lg">
+                    <img src="assets/img/img (12).jpg" 
+                         alt="Campus" 
+                         class="w-full h-48 object-cover transform group-hover:scale-110 transition">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white">Graduation Day</span>
+                    </div>
+                </a>
+                <a href="#" class="group relative block overflow-hidden rounded-lg">
+                    <img src="assets/img/img (8).jpg" 
+                         alt="Campus" 
+                         class="w-full h-48 object-cover transform group-hover:scale-110 transition">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white">Sports Day</span>
+                    </div>
+                </a>
+                <a href="#" class="group relative block overflow-hidden rounded-lg">
+                    <img src="assets/img/img (2).jpg" 
+                         alt="Campus" 
+                         class="w-full h-48 object-cover transform group-hover:scale-110 transition">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <span class="text-white">Classes</span>
+                    </div>
+                </a>
+                <!-- Add more gallery items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Steps -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Admission Process</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="relative w-full md:w-1/4 text-center mb-8 md:mb-0">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="font-semibold mb-2">Application</h3>
+                    <p class="text-gray-600">Submit online form</p>
+                    <div class="hidden md:block absolute top-16 right-0 w-1/2 h-1 bg-gray-300"></div>
+                </div>
+                <div class="relative w-full md:w-1/4 text-center mb-8 md:mb-0">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="font-semibold mb-2">Application</h3>
+                    <p class="text-gray-600">Submit online form</p>
+                    <div class="hidden md:block absolute top-16 right-0 w-1/2 h-1 bg-gray-300"></div>
+                </div>
+                <div class="relative w-full md:w-1/4 text-center mb-8 md:mb-0">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="font-semibold mb-2">Application</h3>
+                    <p class="text-gray-600">Submit online form</p>
+                    <div class="hidden md:block absolute top-16 right-0 w-1/2 h-1 bg-gray-300"></div>
+                </div>
+                <div class="relative w-full md:w-1/4 text-center mb-8 md:mb-0">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">4</div>
+                    <h3 class="font-semibold mb-2">Application</h3>
+                    <p class="text-gray-600">Submit online form</p>
+                    <div class="hidden md:block absolute top-16 right-0 w-1/2 h-1 bg-gray-300"></div>
+                </div>
+                <!-- Add more steps -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Partners</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <img src="assets/img/logo.png" 
+                     alt="Partner" 
+                     class="w-full h-16 object-contain opacity-70 hover:opacity-100 transition">
+                <img src="assets/img/logo.png" 
+                     alt="Partner" 
+                     class="w-full h-16 object-contain opacity-70 hover:opacity-100 transition">
+                <img src="assets/img/logo.png" 
+                     alt="Partner" 
+                     class="w-full h-16 object-contain opacity-70 hover:opacity-100 transition">
+                <img src="assets/img/logo.png" 
+                     alt="Partner" 
+                     class="w-full h-16 object-contain opacity-70 hover:opacity-100 transition">
+                <!-- Add more partner logos -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="bx bx-up-arrow-alt fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition hidden">
+    </button>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white ">
+        <div class="py-12">
+            <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+                <div >
+                    <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                        <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                        <h4 class="text-lg font-semibold ">BrightPath Academy</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm">Inspiring excellence since 2002</p>
+                    <br>
+                    <p class="text-gray-400 text-sm">123 Education Blvd<br>Innovation City, IC 45678</p>
+                </div>
+                <div>
+                    <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                        <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                        <h4 class="text-lg font-semibold ">Quick Links</h4>
+                    </div>
+                    <div class="flex flex-nowrap items-center">
+                        <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                        <a href="index.html" class="text-gray-400 hover:ms-3 transition">Home</a>
+                    </div>
+                    <div class="flex flex-nowrap items-center">
+                        <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                        <a href="academics.html" class="text-gray-400 hover:ms-3 transition">Academics</a>
+                    </div>
+                    <div class="flex flex-nowrap items-center">
+                        <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                        <a href="Admissions.html" class="text-gray-400 hover:ms-3 transition">Admissions</a>
+                    </div>
+                    <div class="flex flex-nowrap items-center">
+                        <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                        <a href="about.html" class="text-gray-400 hover:ms-3 transition">About us</a>
+                    </div>
+                    <div class="flex flex-nowrap items-center">
+                        <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                        <a href="Contact.html" class="text-gray-400 hover:ms-3 transition">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                        <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                        <h4 class="text-lg font-semibold ">Follow Us</h4>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-facebook-circle text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-facebook-circle text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-facebook-circle text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                        <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                        <h4 class="text-lg font-semibold ">Newsletter</h4>
+                    </div>
+                    <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+                </div>
+            </div>
+        </div>
+        <hr class="border-gray-700">
+        <p class="py-5 text-center">BrightPath Academy @copyright 2025. designed by <a href="#">eazy designs</a></p>
+    </footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

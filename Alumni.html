@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Page | BrightPath Academy</title>
+    <link href="assets/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Navigation -->
+<nav class="sticky top-0 bg-white shadow-sm z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="assets/img/logo big.png" alt="Logo" class="h-12 w-full">
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <!-- Home Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-indigo-600 transition flex items-center">
+                        Home
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="absolute hidden group-hover:block pt-4 min-w-[200px]">
+                        <div class="bg-white rounded-lg shadow-lg py-2">
+                            <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>
+                            <a href="home-1.html" class="block px-6 py-2 hover:bg-gray-50">Home 1</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pages Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-indigo-600 transition flex items-center">
+                        Pages
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="absolute hidden group-hover:block pt-4 min-w-[200px]">
+                        <div class="bg-white rounded-lg shadow-lg py-2">
+                            <a href="Blog.html" class="block px-6 py-2 hover:bg-gray-50">Blog</a>
+                            <a href="post.html" class="block px-6 py-2 hover:bg-gray-50">Post</a>
+                            <a href="Alumni.html" class="block px-6 py-2 hover:bg-gray-50 active">Alumni</a>
+                            <a href="Admissions.html" class="block px-6 py-2 hover:bg-gray-50">Admission</a>
+                            <a href="academics.html" class="block px-6 py-2 hover:bg-gray-50">Academics</a>
+                            <a href="404.html
+                            <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>" class="block px-6 py-2 hover:bg-gray-50">404</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition">About Us</a>
+                <a href="Contact.html" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
+                <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition">
+                    Apply Now
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button onclick="toggleMenu()" class="md:hidden text-2xl"><i class="bx bx-menu"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-white/95 z-50 hidden backdrop-blur-sm">
+    <div class="container mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <img src="assets/img/logo.png" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-2xl"><i class="bx bx-x"></i></button>
+        </div>
+        
+        <nav class="space-y-4">
+            <!-- Mobile Home Dropdown -->
+            <div class="relative group">
+                <button class="w-full text-left text-1xl py-2 flex justify-between items-center">
+                    Home
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute hidden group-hover:block pt-4 w-full z-20">
+                    <div class="bg-white rounded-lg shadow-lg py-2">
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>
+                        <a href="home-1.html" class="block px-6 py-2 hover:bg-gray-50">Home 1</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Pages Dropdown -->
+            <div class="relative group">
+                <button class="w-full text-left text-1xl py-2 flex justify-between items-center">
+                    Pages
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute hidden group-hover:block pt-4 w-full">
+                    <div class="bg-white rounded-lg shadow-lg py-2 ">
+                        <a href="Blog.html" class="block px-6 py-2 hover:bg-gray-50">Blog</a>
+                        <a href="post.html" class="block px-6 py-2 hover:bg-gray-50">Post</a>
+                        <a href="Alumni.html" class="block px-6 py-2 hover:bg-gray-50">Alumni</a>
+                        <a href="Admissions.html" class="block px-6 py-2 hover:bg-gray-50">Admission</a>
+                        <a href="academics.html
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>" class="block px-6 py-2 hover:bg-gray-50">Academics</a>
+                        <a href="404.html
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-50">Main Home</a>" class="block px-6 py-2 hover:bg-gray-50">404</a>
+                    </div>
+                </div>
+            </div>            
+
+            <a href="about.html" class="block text-1xl py-2 hover:text-indigo-600">About Us</a>
+            <a href="Contact.html" class="block text-1xl py-2 hover:text-indigo-600">Contact</a>
+            <button class="bg-indigo-600 text-white px-8 py-3 rounded-full mt-4 w-full">
+                Apply Now
+            </button>
+        </nav>
+    </div>
+</div>
+
+    <!-- Alumni Page -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h1 class="text-4xl font-bold mb-12">Alumni Network</h1>
+        
+        <!-- Success Stories -->
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-gray-50 p-12 rounded-2xl">
+                <h2 class="text-2xl font-bold mb-6">Notable Alumni</h2>
+                <div class="space-y-8">
+                    <div class="flex items-center">
+                        <img src="assets/img/img (5).jpg" 
+                             class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <h3 class="font-semibold">Dr. Sarah Johnson</h3>
+                            <p class="text-gray-600">NASA Research Scientist</p>
+                        </div>
+                    </div>
+                    <!-- Add more alumni -->
+                </div>
+            </div>
+            
+            <!-- Alumni Testimonials -->
+            <div class="bg-indigo-50 p-12 rounded-2xl">
+                <div class="text-center mb-8">
+                    <svg class="w-12 h-12 text-indigo-600 mx-auto"><!-- Quote icon --></svg>
+                </div>
+                <blockquote class="text-xl text-center mb-6">
+                    "The foundation I received here shaped my entire career path."
+                </blockquote>
+                <p class="text-center font-semibold">- Michael Chen, Class of 2010</p>
+            </div>
+        </div>
+
+        <!-- Reunion Information -->
+        <div class="bg-gradient-to-r from-indigo-600 to-emerald-500 text-white rounded-2xl p-12">
+            <h2 class="text-2xl font-bold mb-4">2024 Alumni Reunion</h2>
+            <p class="mb-6">Join us for the annual homecoming celebration</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="flex items-center gap-2">
+                    <i class="bx bx-calendar w-8 h-8 text-4xl ml-5"></i>
+                    <div>
+                        <p class="font-semibold">October 15-17, 2024</p>
+                        <p class="text-sm">Main Campus</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="bx bx-calendar w-8 h-8 text-4xl ml-5 te"></i>
+                    <div>
+                        <p class="font-semibold">October 15-17, 2024</p>
+                        <p class="text-sm">Main Campus</p>
+                    </div>
+                </div>
+                <!-- Add more event details -->
+            </div>
+        </div>
+    </section>
+        <!-- Alumni Page -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h1 class="text-4xl font-bold mb-12">Alumni Network</h1>
+        
+        <!-- Previous content remains the same until Connect With Alumni section -->
+
+        <!-- Connect With Alumni -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold mb-8">Connect With Alumni</h2>
+            <div class="bg-white rounded-xl p-6">
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-4 mb-6" id="alumni-filters">
+                    <button data-filter="all" class="px-4 py-2 bg-indigo-600 text-white rounded-full filter-button active">
+                        All
+                    </button>
+                    <button data-filter="technology" class="px-4 py-2 bg-gray-100 rounded-full filter-button hover:bg-gray-200">
+                        Technology
+                    </button>
+                    <button data-filter="business" class="px-4 py-2 bg-gray-100 rounded-full filter-button hover:bg-gray-200">
+                        Business
+                    </button>
+                    <button data-filter="healthcare" class="px-4 py-2 bg-gray-100 rounded-full filter-button hover:bg-gray-200">
+                        Healthcare
+                    </button>
+                    <button data-filter="education" class="px-4 py-2 bg-gray-100 rounded-full filter-button hover:bg-gray-200">
+                        Education
+                    </button>
+                </div>
+
+                <!-- Alumni Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-6" id="alumni-grid">
+                    <!-- Technology Alumni -->
+                    <div class="alumni-card text-center" data-category="technology">
+                        <img src="assets/img/img (5).jpg" 
+                             class="w-16 h-16 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-semibold">Emily Rodriguez</h3>
+                        <p class="text-gray-600 text-sm">Software Engineer</p>
+                        <p class="text-sm text-gray-500 mt-2">Class of 2015</p>
+                    </div>
+
+                    <!-- Business Alumni -->
+                    <div class="alumni-card text-center" data-category="business">
+                        <img src="assets/img/img (11).jpg" 
+                             class="w-16 h-16 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-semibold">Michael Chen</h3>
+                        <p class="text-gray-600 text-sm">Investment Banker</p>
+                        <p class="text-sm text-gray-500 mt-2">Class of 2010</p>
+                    </div>
+                    
+                    <!-- Technology Alumni -->
+                    <div class="alumni-card text-center" data-category="technology">
+                        <img src="assets/img/img (19).jpg" 
+                             class="w-16 h-16 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-semibold">Emily Rodriguez</h3>
+                        <p class="text-gray-600 text-sm">Software Engineer</p>
+                        <p class="text-sm text-gray-500 mt-2">Class of 2015</p>
+                    </div>
+
+                    <!-- Business Alumni -->
+                    <div class="alumni-card text-center" data-category="business">
+                        <img src="assets/img/img (11).jpg" 
+                             class="w-16 h-16 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="font-semibold">Michael Chen</h3>
+                        <p class="text-gray-600 text-sm">Investment Banker</p>
+                        <p class="text-sm text-gray-500 mt-2">Class of 2010</p>
+                    </div>
+
+                    <!-- Add more alumni cards with appropriate data-category attributes -->
+                </div>
+
+                <!-- No Results Message -->
+                <div id="alumni-no-results" class="hidden text-center py-5">
+                    <div class="text-4xl mb-2">😕</div>
+                    <h3 class="text-2xl font-bold mb-2">No Alumni Found</h3>
+                    <p class="text-gray-600">Try selecting a different category</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="bx bx-up-arrow-alt fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition hidden">
+    </button>
+
+    <hr>
+
+ <!-- Footer -->
+ <footer class="bg-gray-900 text-white ">
+    <div class="py-12">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <div >
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">BrightPath Academy</h4>
+                </div>
+                <p class="text-gray-400 text-sm">Inspiring excellence since 2002</p>
+                <br>
+                <p class="text-gray-400 text-sm">123 Education Blvd<br>Innovation City, IC 45678</p>
+            </div>
+            <div>
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">Quick Links</h4>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="index.html" class="text-gray-400 hover:ms-3 transition">Home</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="academics.html" class="text-gray-400 hover:ms-3 transition">Academics</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="Admissions.html" class="text-gray-400 hover:ms-3 transition">Admissions</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="about.html" class="text-gray-400 hover:ms-3 transition">About us</a>
+                </div>
+                <div class="flex flex-nowrap items-center">
+                    <i class="bx bx-chevron-right text-2xl text-gray-400"></i>
+                    <a href="Contact.html" class="text-gray-400 hover:ms-3 transition">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">Follow Us</h4>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="bx bxl-facebook-circle text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-nowrap items-center mb-4 gap-3 cursor-default select-none">
+                    <div class="w-1 h-6 bg-indigo-600 bg"></div>
+                    <h4 class="text-lg font-semibold ">Newsletter</h4>
+                </div>
+                <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+            </div>
+        </div>
+    </div>
+    <hr class="border-gray-700">
+    <p class="py-5 text-center">BrightPath Academy @copyright 2025. designed by <a href="#">eazy designs</a></p>
+</footer>
+
+    <!-- Modal -->
+    <div id="campus-modal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-8">
+            <div class="flex justify-between mb-6">
+                <h3 class="text-2xl font-bold">Campus Details</h3>
+                <button onclick="closeModal()" class="text-2xl">×</button>
+            </div>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+<script src="assets/js/script.js"></script>
+<script>
+    // Alumni Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const alumniCards = document.querySelectorAll('.alumni-card');
+    const noResults = document.getElementById('alumni-no-results');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active', 'bg-indigo-600', 'text-white'));
+            
+            // Add active class to clicked button
+            button.classList.add('active', 'bg-indigo-600', 'text-white');
+            
+            // Get selected filter
+            const filter = button.dataset.filter;
+            
+            // Filter alumni cards
+            let visibleCount = 0;
+            alumniCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        });
+    });
+
+    // Initialize with all alumni visible
+    document.querySelector('[data-filter="all"]').click();
+</script>
+
+<style>
+    .filter-button {
+        transition: all 0.2s ease;
+    }
+
+    .filter-button.active {
+        background-color: #4f46e5;
+        color: white;
+    }
+
+    .filter-button:not(.active):hover {
+        background-color: #e5e7eb;
+    }
+
+    .alumni-card {
+        transition: all 0.3s ease;
+    }
+
+    .alumni-card img {
+        transition: transform 0.2s ease;
+    }
+
+    .alumni-card:hover img {
+        transform: scale(1.1);
+    }
+</style>
+</body>
+</html>
